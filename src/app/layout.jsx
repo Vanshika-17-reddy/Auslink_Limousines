@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Montserrat, Catamaran } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const catamaran = Catamaran({
+  variable: "--font-catamaran",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL("https://auslinklimousines.au"),
   title: {
     default: "Auslink Limousines | Premium Limousine Hire Melbourne",
@@ -82,11 +83,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en-AU">
       <head>
@@ -143,9 +140,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${playfair.variable} ${inter.variable} antialiased`}>
+      <body className={`${montserrat.variable} ${catamaran.variable} antialiased`}>
         <Header />
-        <main className="min-h-screen pt-[72px]">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

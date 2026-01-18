@@ -1,0 +1,212 @@
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
+:root {
+  --color-gold: #b69561;
+  --color-gold-light: #d4b896;
+  --color-gold-dark: #8a6f3e;
+  --color-black: #0a0a0a;
+  --color-dark: #111111;
+  --color-dark-light: #1a1a1a;
+  --color-white: #ffffff;
+
+  --font-heading: var(--font-montserrat), sans-serif;
+  --font-body: var(--font-catamaran), sans-serif;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+.section-padding {
+  padding: 96px 0;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+.btn-gold {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-gold);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+.btn-dark {
+  display: inline-block;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ========================================
+   TEXT STYLES
+   ======================================== */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.heading-xl {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.heading-lg {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.heading-md {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.tagline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+.body-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   SELECTION
+   ======================================== */
+::selection {
+  background: var(--color-gold);
+  color: black;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (min-width: 768px) {
+  .heading-xl {
+    font-size: 64px;
+  }
+
+  .heading-lg {
+    font-size: 48px;
+  }
+
+  .heading-md {
+    font-size: 32px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP
+   ======================================== */
+@media (min-width: 1024px) {
+  .heading-xl {
+    font-size: 80px;
+  }
+
+  .heading-lg {
+    font-size: 56px;
+  }
+}

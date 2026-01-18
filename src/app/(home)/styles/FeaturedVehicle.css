@@ -1,0 +1,116 @@
+/* ========================================
+   FEATURED VEHICLE SECTION STYLES
+   ======================================== */
+
+.featured {
+  padding: 96px 0;
+  background-color: var(--color-black);
+}
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.featured__tagline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+  color: var(--color-gold);
+}
+
+.featured__title {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: var(--color-gold);
+}
+
+.featured__description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.featured__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.featured__list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.featured__check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-gold);
+}
+
+.featured__image-wrapper {
+  position: relative;
+}
+
+.featured__image-placeholder {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featured__image-content {
+  text-align: center;
+}
+
+.featured__image-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  color: rgba(182, 149, 97, 0.3);
+}
+
+.featured__image-label {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE - SMALL SCREENS
+   ======================================== */
+@media (min-width: 640px) {
+  .featured__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (min-width: 768px) {
+  .featured__title {
+    font-size: 48px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP
+   ======================================== */
+@media (min-width: 1024px) {
+  .featured__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+  }
+}

@@ -1,0 +1,93 @@
+/* ========================================
+   WHY CHOOSE US SECTION STYLES
+   ======================================== */
+
+.why {
+  padding: 96px 0;
+  background-color: var(--color-dark);
+}
+
+.why__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.why__tagline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+  color: var(--color-gold);
+}
+
+.why__title {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.why__item {
+  text-align: center;
+}
+
+.why__number-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  background-color: rgba(182, 149, 97, 0.1);
+}
+
+.why__number {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-gold);
+}
+
+.why__item-title {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.why__item-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE - SMALL SCREENS
+   ======================================== */
+@media (min-width: 640px) {
+  .why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (min-width: 768px) {
+  .why__title {
+    font-size: 48px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP
+   ======================================== */
+@media (min-width: 1024px) {
+  .why__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

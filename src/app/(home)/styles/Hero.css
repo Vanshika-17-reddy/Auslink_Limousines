@@ -1,0 +1,197 @@
+/* ========================================
+   HERO SECTION STYLES
+   ======================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent, rgba(0,0,0,0.8));
+}
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 128px 0;
+}
+
+.hero__tagline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
+  color: var(--color-gold);
+}
+
+.hero__title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--color-gold);
+}
+
+.hero__subtitle {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  color: var(--color-white);
+}
+
+.hero__description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.hero__buttons .btn-gold,
+.hero__buttons .btn-outline {
+  padding: 14px 28px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  width: auto;
+  min-width: 180px;
+  text-align: center;
+}
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero__stat {
+  text-align: center;
+}
+
+.hero__stat-value {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: var(--color-gold);
+}
+
+.hero__stat-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__scroll-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-gold);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL SCREENS
+   ======================================== */
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: 56px;
+  }
+
+  .hero__subtitle {
+    font-size: 40px;
+  }
+
+  .hero__buttons {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .hero__buttons .btn-gold,
+  .hero__buttons .btn-outline {
+    padding: 16px 36px;
+    font-size: 13px;
+    min-width: 200px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 72px;
+  }
+
+  .hero__subtitle {
+    font-size: 48px;
+  }
+
+  .hero__description {
+    font-size: 20px;
+  }
+
+  .hero__buttons .btn-gold,
+  .hero__buttons .btn-outline {
+    padding: 16px 40px;
+    font-size: 14px;
+  }
+
+  .hero__stats {
+    gap: 64px;
+  }
+
+  .hero__stat-value {
+    font-size: 48px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP
+   ======================================== */
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 96px;
+  }
+
+  .hero__subtitle {
+    font-size: 64px;
+  }
+}
