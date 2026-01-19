@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import VehicleShowcase from './components/VehicleShowcase';
 import Reviews from '../components/Reviews';
+import ServiceAreas from '../components/ServiceAreas';
 import CTA from './components/CTA';
 import { seo } from './seo';
 
@@ -22,6 +23,7 @@ export default function Fleet() {
       <Hero />
       <VehicleShowcase />
       <Reviews />
+      <ServiceAreas />
       <CTA />
     </>
   );

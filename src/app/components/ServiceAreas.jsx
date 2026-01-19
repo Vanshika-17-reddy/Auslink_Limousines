@@ -43,13 +43,15 @@ export default function ServiceAreas() {
         <div className="service-areas__grid">
           {areas.map((area, index) => (
             <div key={index} className="service-areas__card">
-              <div className="service-areas__icon">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              <div className="service-areas__card-header">
+                <div className="service-areas__icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="service-areas__region">{area.region}</h3>
               </div>
-              <h3 className="service-areas__region">{area.region}</h3>
               <ul className="service-areas__suburbs">
                 {area.suburbs.map((suburb, i) => (
                   <li key={i}>{suburb}</li>
