@@ -56,7 +56,7 @@ export const servicesContent = {
 
 // Featured Vehicle Section Content
 export const featuredVehicleContent = {
-  tagline: "Our Flagship",
+  tagline: "Featured Vehicle",
   title: "Lincoln Super Stretch",
   description: "Our stunning 10-seater Lincoln Super Stretch limousine is the epitome of luxury travel. Featuring plush leather seating, ambient lighting, premium sound system, and a fully stocked bar, it's perfect for any special occasion.",
   btnText: "Explore Our Fleet",

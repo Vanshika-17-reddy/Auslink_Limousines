@@ -61,30 +61,11 @@
   position: relative;
 }
 
-.featured__image-placeholder {
-  aspect-ratio: 4/3;
+.featured__image {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-dark-light);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.featured__image-content {
-  text-align: center;
-}
-
-.featured__image-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  color: rgba(182, 149, 97, 0.3);
-}
-
-.featured__image-label {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 14px;
+  display: block;
 }
 
 /* ========================================
