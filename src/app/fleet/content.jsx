@@ -31,10 +31,14 @@ export const vehicleShowcaseContent = {
   ],
   weddingPackage: "Wedding package includes white ribbons, red carpet for the bride, complimentary bottle of Champagne for the bride and groom, plus complimentary soft drinks and water.",
   galleryImages: [
-    { label: "Interior View" },
-    { label: "Star Light Ceiling" },
-    { label: "Leather Seating" },
-    { label: "Bar Area" },
+    { label: "Interior View", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/InteriorWithPurpleLights.jpeg" },
+    { label: "Star Light Ceiling", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/InteriorWithGreenLights.jpeg" },
+    { label: "Leather Seating", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/InteriorWithBlueLights.jpeg" },
+    { label: "Bar Area", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/InteriorViewsDrink.jpeg" },
+    { label: "Back Exterior", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/BackExteriorView.jpg" },
+    { label: "Exterior View", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/ExteriorView.jpg" },
+    { label: "Front Exterior", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/FrontExteriorView.jpg" },
+    { label: "Red Carpet Service", src: "https://auslink-limousines.s3.ap-southeast-2.amazonaws.com/Images/LimousineWithRedCarpet.jpg" },
   ],
 };
 

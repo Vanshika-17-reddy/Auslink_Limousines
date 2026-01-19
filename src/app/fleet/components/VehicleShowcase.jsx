@@ -29,6 +29,23 @@ export default function VehicleShowcase() {
   return (
     <section className="vehicle-showcase">
       <div className="container">
+        {/* Image Gallery - 4 Columns */}
+        <div className="vehicle-showcase__gallery">
+          {galleryImages.map((image, index) => (
+            <button
+              key={index}
+              className="vehicle-showcase__gallery-item"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={image.src}
+                alt={image.label}
+                className="vehicle-showcase__gallery-image"
+              />
+            </button>
+          ))}
+        </div>
+
         {/* Car Name & Description */}
         <div className="vehicle-showcase__info">
           <h2 className="vehicle-showcase__title">{title}</h2>
@@ -63,24 +80,6 @@ export default function VehicleShowcase() {
         <div className="vehicle-showcase__wedding">
           <p className="vehicle-showcase__wedding-text">{weddingPackage}</p>
         </div>
-
-        {/* Image Gallery - 4 Columns */}
-        <div className="vehicle-showcase__gallery">
-          {galleryImages.map((image, index) => (
-            <button
-              key={index}
-              className="vehicle-showcase__gallery-item"
-              onClick={() => openLightbox(index)}
-            >
-              <div className="vehicle-showcase__gallery-placeholder">
-                <svg className="vehicle-showcase__gallery-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="vehicle-showcase__gallery-label">{image.label}</p>
-              </div>
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Lightbox Modal */}
@@ -102,12 +101,11 @@ export default function VehicleShowcase() {
           </button>
 
           <div className="lightbox__content" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox__image-placeholder">
-              <svg className="lightbox__image-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="lightbox__image-label">{galleryImages[currentImage].label}</p>
-            </div>
+            <img
+              src={galleryImages[currentImage].src}
+              alt={galleryImages[currentImage].label}
+              className="lightbox__image"
+            />
             <p className="lightbox__counter">{currentImage + 1} / {galleryImages.length}</p>
           </div>
 
